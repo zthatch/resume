@@ -5,7 +5,7 @@ import WorkExperience from "./WorkExperience";
 export default function Home() {
   return ( 
   <section>
-    <header className="flex justify-between">
+    <header className="flex justify-between flex-wrap">
       <div className="flex justify-left">
         <Image
           alt="Zachary Thatcher"
@@ -16,7 +16,7 @@ export default function Home() {
           Zachary Thatcher <br/> Senior Softare Engineer <br/> Geli/Qcells
         </p>
       </div>
-      <p className="text-right font-bold">
+      <p className="text-center font-bold">
         Contact Info: <br/> zachary.alan.thatcher@gmail.com <br/> 860-839-0933
       </p>
     </header>
