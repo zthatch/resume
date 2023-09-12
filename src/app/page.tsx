@@ -1,113 +1,100 @@
-import Image from 'next/image'
+import Image from "next/image";
+import avatar from "src/app/avatar.png";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+  return ( 
+  <section>
+    <header className="flex justify-between">
+      <div className="flex justify-left">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          alt="Zachary Thatcher"
+          src={avatar}
+          className="border border-neutral-200 dark:border-neutral-700 rounded-full h-20 w-20 mr-10"
         />
+        <p className="font-bold">
+          Zachary Thatcher <br/> Senior Softare Engineer <br/> Geli/Qcells
+        </p>
       </div>
+      <p className="text-right font-bold">
+        Contact Info: <br/> Email: zachary.alan.thatcher@gmail.com <br/> Cell Phone: 860-839-0933
+      </p>
+    </header>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+    <h1 className="font-bold text-3xl my-3 tracking-tighter">
+      Mission Statement
+      </h1>
+    <p className="ml-8">
+      An architect of software solutions with extensive knowledge of different backend designs and technologies. Leads projects that improve data processing, facilitate scaling, and solve longstanding performance issues.
+      <br/>
+      <br/>
+      Looking to for an opportunity to leverage early-stage product development skills and extensive background in the energy industry.
+    </p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+    <h1 className="font-bold text-3xl my-3 tracking-tighter">
+      Skills
+    </h1>
+    <p className="">
+        Languages: Python (Flask, FastAPI, Pandas), Java(Spring), SQL, C, Javascript, CSS <br/>
+        Message Brokers: Kafka, MQTT, AMQP <br/>
+        Databases: Postgres, Cassandra, MongoDB, Redis <br/>
+        Infrastructure/Monitoring: Git, Jenkins, Docker, Kubernetes, Prometheus
+    </p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+    <h1 className="text-3xl font-bold tracking-tighter mt-5">
+      Employment History
+    </h1>
+    <h2 className="mt-3 text-2xl font-bold tracking-tighter">
+      Senior Software Engineer at Q-Cells - New York (Remote)
+    </h2>
+      <h3 className="font-bold tracking-tighter text-lg">
+        MARCH 2022 — PRESENT  
+      </h3>
+      <p className="ml-8 ">
+          Lead development for several backend services (Flask+Spring), as well as distributed schedulers, during period where scale increased by a factor of 100-1000x
+      </p>
+        <ul className="ml-12 list-disc">
+          <li>Eliminated numerous performance issues for SQL backed services (Kubernetes resource management, ORM nuances, caching, etc.), leading to response time improvement of 50-100x</li>
+          <li>Designed/implemented SQLAlchemy-style AWS Athena abstraction to create data lake for offline data analysis and debugging</li>
+          <li>Created scalable async streaming services with Spring Cloud Stream and Spring Integrations for Kafka/AMQP/MQTT</li>
+          <li>Implemented new async access patterns for Cassandra with Spring service</li>
+          <li>Proposed/lead the implementation of OpenAPI documentation for rest APIs</li>
+          <li>Manage technical relationship with third party APIs</li>
+          <li>Implemented job locking for distributed python schedulers via Redis</li>
+        </ul>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <h2 className="mt-3 text-2xl font-bold tracking-tighter">
+      Backend Python Researcher at Billinge Group - New York City
+    </h2>
+      <h3 className="font-bold tracking-tighter text-lg">
+        MAY 2020 — FEBRUARY 2022
+      </h3>
+      <p className="ml-8">
+        Backend infrastructure/data-processing specialist for a research group with a rapidly expanding cloud presence.
+      </p>
+        <ul className="ml-12 list-disc">
+          <li>Created/deployed unsupervised clustering app for full stack research website</li>
+          <li>Maintained full stack Flask app, pdfitc.org (PR acceptance rights and GCP privileges)</li>
+          <li>Implemented proper frontend security practices including CSRF and CORS</li>
+          <li>Added backend interchange-ability (aggregation and migration) to custom document DBMS/report generator</li>
+          <li>Prototyped scientific-data search microservice via fast-api and Mongo Atlas</li>
+        </ul>
+
+    <h2 className="mt-3 text-2xl font-bold tracking-tighter">
+        Engineering/Embedded Systems Consultant at MPR Associates, Inc. - Alexandria, VA
+    </h2>
+      <h3 className="font-bold tracking-tighter text-lg">
+        JULY 2017 — APRIL 2020
+      </h3>
+      <p className="ml-8">
+          Delivered a variety of engineering products for QA intensive industries. Mainly focused on embedded software development.
+      </p>
+        <ul className="ml-12 list-disc">
+          <li>Partial and sole contributor to C/C++ codebases for several medical devices that went into commercial production</li>
+          <li>Established and managed requirements throughout the QA lifecycle</li>
+          <li>Performed QA inspections on client software development workflows according to ISO standards</li>
+          <li>Wrote technical reports explaining engineering risks and failures</li>
+          <li>Cost/schedule oversight and risk analysis for highly-technical asset acquisitions</li>
+        </ul>
+  </section>
   )
 }
