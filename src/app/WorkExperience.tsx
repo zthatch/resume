@@ -20,8 +20,8 @@ const WorkExperience: FC<WorkExperienceProps> = ({title, timespan, summary, achi
         {summary}
     </p>
       <ul className="ml-12 list-disc">
-        {achievements.map((element, i) => (
-            <li>{element}</li>
+        {achievements.map((element, idx) => (
+            <li key={idx}>{element} </li>
         ))}
       </ul>
     </section>
