@@ -9,14 +9,14 @@ export default function Home() {
         <Image
           alt="Zachary Thatcher"
           src={avatar}
-          className="border border-neutral-200 dark:border-neutral-700 rounded-full h-20 w-20 mr-10"
+          className="border border-neutral-200 dark:border-neutral-700 rounded-full h-20 w-20 mr-5"
         />
         <p className="font-bold">
           Zachary Thatcher <br/> Senior Softare Engineer <br/> Geli/Qcells
         </p>
       </div>
       <p className="text-right font-bold">
-        Contact Info: <br/> Email: zachary.alan.thatcher@gmail.com <br/> Cell Phone: 860-839-0933
+        Contact Info: <br/> zachary.alan.thatcher@gmail.com <br/> 860-839-0933
       </p>
     </header>
 
