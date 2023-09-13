@@ -1,6 +1,7 @@
 import Image from "next/image";
 import avatar from "src/app/avatar.png";
 import WorkExperience from "./WorkExperience";
+import Button from '@mui/material/Button';
 
 export default function Home() {
   return ( 
@@ -87,6 +88,7 @@ export default function Home() {
         ]
         }/>
       </section>
+      <Button variant="contained"> This is my Ideal Candidate! </Button>
   </section>
   )
 }
