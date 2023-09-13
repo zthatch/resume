@@ -5,26 +5,26 @@ import WorkExperience from "./WorkExperience";
 export default function Home() {
   return ( 
   <section>
-    <header className="flex justify-between flex-wrap">
-      <div className="flex justify-left">
+    <header className="">
+      <div className="">
         <Image
           alt="Zachary Thatcher"
           src={avatar}
-          className="border border-neutral-200 dark:border-neutral-700 rounded-full h-20 w-20 mr-5"
+          className=""
         />
-        <p className="font-bold">
+        <p className="">
           Zachary Thatcher <br/> Senior Softare Engineer <br/> Geli/Qcells
         </p>
       </div>
-      <p className="text-center font-bold">
+      <p className="">
         Contact Info: <br/> zachary.alan.thatcher@gmail.com <br/> 860-839-0933
       </p>
     </header>
     <section>
-      <h1 className="font-bold text-3xl my-3 tracking-tighter">
+      <h1 className="">
         Mission Statement
         </h1>
-      <p className="ml-8">
+      <p className="">
         An architect of software solutions with extensive knowledge of different backend designs and technologies. Leads projects that improve data processing, facilitate scaling, and solve longstanding performance issues.
         <br/>
         <br/>
@@ -33,7 +33,7 @@ export default function Home() {
     </section>
 
     <section>
-      <h1 className="font-bold text-3xl my-3 tracking-tighter">
+      <h1 className="">
         Skills
       </h1>
       <p className="">
@@ -45,7 +45,7 @@ export default function Home() {
     </section>
 
     <section>
-      <h1 className="text-3xl font-bold tracking-tighter mt-5">
+      <h1 className="">
         Employment History
       </h1>
         <WorkExperience 

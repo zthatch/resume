@@ -10,16 +10,16 @@ interface WorkExperienceProps {
 const WorkExperience: FC<WorkExperienceProps> = ({title, timespan, summary, achievements}) => {
     return (
     <section>
-    <h2 className="mt-3 text-2xl font-bold tracking-tighter">
+    <h2 className="">
       {title}
     </h2>
-    <h3 className="font-bold tracking-tighter text-lg">
+    <h3 className="">
       {timespan} 
     </h3>
-    <p className="ml-8 ">
+    <p className="">
         {summary}
     </p>
-      <ul className="ml-12 list-disc">
+      <ul className="">
         {achievements.map((element, idx) => (
             <li key={idx}>{element} </li>
         ))}
