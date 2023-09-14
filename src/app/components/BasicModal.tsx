@@ -29,27 +29,28 @@ export default function BasicModal() {
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-    
+
     // this prevents sending emails if there is no form.
     // in case currentForm cannot possibly ever be null,
     // you could alert the user or throw an Error, here
     if (formReference.current == null) return;
 
-    if (process.env.EMAILJS_SERVICE_ID == null) {
+    if (!process.env.EMAILJS_SERVICE_ID) {
       console.log("EMAILJS_SERVICE_ID not set")
       return;
     };
-    if (process.env.EMAILJS_TEMPLATE_ID == null) {
+    if (!process.env.EMAILJS_TEMPLATE_ID) {
       console.log("EMAILJS_TEMPLATE_ID not set")
       return;
     };
-    if (process.env.EMAILJS_PUBLIC_KEY == null) {
+    if (!process.env.EMAILJS_PUBLIC_KEY) {
       console.log("EMAILJS_PUBLIC_KEY not set")
       return;
     };
 
     emailjs.sendForm(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, formReference.current, process.env.EMAILJS_PUBLIC_KEY)
       .then((result) => {
+          handleClose();
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
@@ -95,7 +96,7 @@ export default function BasicModal() {
                 Enter Message
               </FormLabel>
                 <TextField multiline={true} minRows="2" name="message"/>
-              <Button variant="contained" sx={{mt: 3}} type="submit" value="Send" onClick={handleClose}>Submit</Button>
+              <Button variant="contained" sx={{mt: 3}} type="submit" value="Send">Submit</Button>
             </FormControl>
           </form>
         </Box>
