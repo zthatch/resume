@@ -1,53 +1,53 @@
 import Image from "next/image";
 import avatar from "src/app/avatar.png";
-import WorkExperience from "./WorkExperience";
+import WorkExperience from "./components/WorkExperience";
+import Section from "./components/Section"
+import {breakpointStyle} from "./utils/CommonStyles"
+import {Box, Typography, List, ListItem, ListItemText, Avatar, Tooltip} from '@mui/material';
+import BasicModal from "./components/BasicModal";
 
 export default function Home() {
   return ( 
   <section>
-    <header className="flex justify-between flex-wrap">
-      <div className="flex justify-left">
-        <Image
-          alt="Zachary Thatcher"
-          src={avatar}
-          className="border border-neutral-200 dark:border-neutral-700 rounded-full h-20 w-20 mr-5"
-        />
-        <p className="font-bold">
+    <Box sx={{ display: 'flex' , flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', pt: 5}}>
+      <Box sx={{display: 'flex', mb: 2, alignItems: 'center', justifyContent: {xs: "center", sm: "left"}, ...breakpointStyle}}>
+        <Tooltip title="Made With Material UI!">
+          <Avatar sx={{ width: 85, height: 85 }}>
+            <Image
+              alt="Zachary Thatcher"
+              src={avatar}
+            />
+          </Avatar>
+        </Tooltip>
+        <Typography color="initial" sx={{pl: 2}}>
           Zachary Thatcher <br/> Senior Softare Engineer <br/> Geli/Qcells
-        </p>
-      </div>
-      <p className="text-center font-bold">
+        </Typography>
+          
+      </Box>
+      <BasicModal/>
+      <Typography sx={{mt: 2, textAlign: {xs: "center", sm: "right"}, ...breakpointStyle}}>
         Contact Info: <br/> zachary.alan.thatcher@gmail.com <br/> 860-839-0933
-      </p>
-    </header>
-    <section>
-      <h1 className="font-bold text-3xl my-3 tracking-tighter">
-        Mission Statement
-        </h1>
-      <p className="ml-8">
+      </Typography>
+    </Box>
+    <Section title="Mission Statement">
+      <Typography>
         An architect of software solutions with extensive knowledge of different backend designs and technologies. Leads projects that improve data processing, facilitate scaling, and solve longstanding performance issues.
         <br/>
         <br/>
         Looking to for an opportunity to leverage early-stage product development skills and extensive background in the energy industry.
-      </p>
-    </section>
+      </Typography>
+    </Section>
 
-    <section>
-      <h1 className="font-bold text-3xl my-3 tracking-tighter">
-        Skills
-      </h1>
-      <p className="">
-          Languages: Python (Flask, FastAPI, Pandas), Java(Spring), SQL, C, Javascript, CSS <br/>
-          Message Brokers: Kafka, MQTT, AMQP <br/>
-          Databases: Postgres, Cassandra, MongoDB, Redis <br/>
-          Infrastructure/Monitoring: Git, Jenkins, Docker, Kubernetes, Prometheus
-      </p>
-    </section>
+    <Section title="Skills">
+      <List disablePadding={true}>
+          <ListItem><ListItemText primary="Languages: Python (Flask, FastAPI, Pandas), Java (Spring), SQL, C, Javascript, CSS"/> </ListItem>
+          <ListItem><ListItemText primary="Message Brokers: Kafka, MQTT, AMQP"/></ListItem>
+          <ListItem><ListItemText primary="Databases: Postgres, Cassandra, MongoDB, Redis"/></ListItem>
+          <ListItem><ListItemText primary="Infrastructure/Monitoring: Git, Jenkins, Docker, Kubernetes, Prometheus"/></ListItem>
+      </List>
+    </Section>
 
-    <section>
-      <h1 className="text-3xl font-bold tracking-tighter mt-5">
-        Employment History
-      </h1>
+    <Section title="Employment History">
         <WorkExperience 
         title={"Senior Software Engineer at Q-Cells - New York (Remote)"} 
         timespan={"MARCH 2022 — PRESENT "} 
@@ -86,7 +86,17 @@ export default function Home() {
           "Cost/schedule oversight and risk analysis for highly-technical asset acquisitions"
         ]
         }/>
-      </section>
+    </Section>
+    <Section title="Education">
+      <Box sx={{mb: 2}}>
+        <Typography variant="h4" color="initial"> Columbia University</Typography>
+          <Typography variant="h5" color="initial"> Masters of Science</Typography>
+      </Box>
+      <Box sx={{pb: 10}}>
+        <Typography variant="h4" color="initial"> University Of Connecticut</Typography>
+          <Typography variant="h5" color="initial"> Bachelors of Science - Magna Cum Laude</Typography>
+      </Box>
+    </Section>
   </section>
   )
 }
