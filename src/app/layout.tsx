@@ -16,11 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Box sx={{bgcolor: "Beige"}}>
-        <Container >
-          {children}
-        </Container>
-      </Box>
+      <body>
+        <Box sx={{bgcolor: "Beige"}}>
+          <Container >
+            {children}
+          </Container>
+        </Box>
+      </body>
     </html>
   )
 }

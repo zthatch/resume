@@ -1,32 +1,31 @@
 import Image from "next/image";
 import avatar from "src/app/avatar.png";
-import WorkExperience from "./WorkExperience";
-import Section from "./Section"
-import {Button, Box, Typography, List, ListItem, ListItemText, Avatar, Tooltip} from '@mui/material';
-
-const breakpoints = {
-  flex: { xs: "100%", sm: "calc(50% - 50px)",
-   md: "calc(33% - 50px)", lg: "calc(25% - 50px)" },
-};
+import WorkExperience from "./components/WorkExperience";
+import Section from "./components/Section"
+import {breakpointStyle} from "./utils/CommonStyles"
+import {Box, Typography, List, ListItem, ListItemText, Avatar, Tooltip} from '@mui/material';
+import BasicModal from "./components/BasicModal";
 
 export default function Home() {
   return ( 
   <section>
     <Box sx={{ display: 'flex' , flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', pt: 5}}>
-      <Box sx={{display: 'flex', mb: 2, alignItems: 'center', justifyContent: {xs: "center", sm: "left"}, ...breakpoints}}>
-        <Avatar sx={{ width: 85, height: 85 }}>
-          <Image
-            alt="Zachary Thatcher"
-            src={avatar}
-          />
-        </Avatar>
+      <Box sx={{display: 'flex', mb: 2, alignItems: 'center', justifyContent: {xs: "center", sm: "left"}, ...breakpointStyle}}>
+        <Tooltip title="Made With Material UI!">
+          <Avatar sx={{ width: 85, height: 85 }}>
+            <Image
+              alt="Zachary Thatcher"
+              src={avatar}
+            />
+          </Avatar>
+        </Tooltip>
         <Typography color="initial" sx={{pl: 2}}>
           Zachary Thatcher <br/> Senior Softare Engineer <br/> Geli/Qcells
         </Typography>
           
       </Box>
-      <Button variant="contained" sx={{breakpoints}}> This is my Ideal Candidate! </Button>
-      <Typography sx={{mt: 2, textAlign: {xs: "center", sm: "right"}, ...breakpoints}}>
+      <BasicModal/>
+      <Typography sx={{mt: 2, textAlign: {xs: "center", sm: "right"}, ...breakpointStyle}}>
         Contact Info: <br/> zachary.alan.thatcher@gmail.com <br/> 860-839-0933
       </Typography>
     </Box>
