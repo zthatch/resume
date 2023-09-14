@@ -1,4 +1,8 @@
 import React, { FC } from "react";
+import Typography from '@mui/material/Typography'
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import List from '@mui/material/List';
 
 interface WorkExperienceProps {
     title: string;
@@ -10,20 +14,20 @@ interface WorkExperienceProps {
 const WorkExperience: FC<WorkExperienceProps> = ({title, timespan, summary, achievements}) => {
     return (
     <section>
-    <h2 className="">
+    <Typography variant="h4" sx={{pt: 3}}>
       {title}
-    </h2>
-    <h3 className="">
+    </Typography>
+    <Typography variant="h6">
       {timespan} 
-    </h3>
-    <p className="">
+    </Typography>
+    <Typography variant="body1">
         {summary}
-    </p>
-      <ul className="">
+    </Typography>
+    <List sx={{ listStyleType: 'disc', pl: 4 }}>
         {achievements.map((element, idx) => (
-            <li key={idx}>{element} </li>
+            <ListItem sx={{ display: 'list-item', py: 0.1}} key={idx}> <ListItemText primary={element}/> </ListItem>
         ))}
-      </ul>
+    </List>
     </section>
 )}
 

@@ -1,54 +1,54 @@
 import Image from "next/image";
 import avatar from "src/app/avatar.png";
 import WorkExperience from "./WorkExperience";
-import Button from '@mui/material/Button';
+import Section from "./Section"
+import {Button, Box, Typography, List, ListItem, ListItemText, Avatar, Tooltip} from '@mui/material';
+
+const breakpoints = {
+  flex: { xs: "100%", sm: "calc(50% - 50px)",
+   md: "calc(33% - 50px)", lg: "calc(25% - 50px)" },
+};
 
 export default function Home() {
   return ( 
   <section>
-    <header className="">
-      <div className="">
-        <Image
-          alt="Zachary Thatcher"
-          src={avatar}
-          className=""
-        />
-        <p className="">
+    <Box sx={{ display: 'flex' , flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', pt: 5}}>
+      <Box sx={{display: 'flex', mb: 2, alignItems: 'center', justifyContent: {xs: "center", sm: "left"}, ...breakpoints}}>
+        <Avatar sx={{ width: 85, height: 85 }}>
+          <Image
+            alt="Zachary Thatcher"
+            src={avatar}
+          />
+        </Avatar>
+        <Typography color="initial" sx={{pl: 2}}>
           Zachary Thatcher <br/> Senior Softare Engineer <br/> Geli/Qcells
-        </p>
-      </div>
-      <p className="">
+        </Typography>
+          
+      </Box>
+      <Button variant="contained" sx={{breakpoints}}> This is my Ideal Candidate! </Button>
+      <Typography sx={{mt: 2, textAlign: {xs: "center", sm: "right"}, ...breakpoints}}>
         Contact Info: <br/> zachary.alan.thatcher@gmail.com <br/> 860-839-0933
-      </p>
-    </header>
-    <section>
-      <h1 className="">
-        Mission Statement
-        </h1>
-      <p className="">
+      </Typography>
+    </Box>
+    <Section title="Mission Statement">
+      <Typography>
         An architect of software solutions with extensive knowledge of different backend designs and technologies. Leads projects that improve data processing, facilitate scaling, and solve longstanding performance issues.
         <br/>
         <br/>
         Looking to for an opportunity to leverage early-stage product development skills and extensive background in the energy industry.
-      </p>
-    </section>
+      </Typography>
+    </Section>
 
-    <section>
-      <h1 className="">
-        Skills
-      </h1>
-      <p className="">
-          Languages: Python (Flask, FastAPI, Pandas), Java(Spring), SQL, C, Javascript, CSS <br/>
-          Message Brokers: Kafka, MQTT, AMQP <br/>
-          Databases: Postgres, Cassandra, MongoDB, Redis <br/>
-          Infrastructure/Monitoring: Git, Jenkins, Docker, Kubernetes, Prometheus
-      </p>
-    </section>
+    <Section title="Skills">
+      <List disablePadding={true}>
+          <ListItem><ListItemText primary="Languages: Python (Flask, FastAPI, Pandas), Java (Spring), SQL, C, Javascript, CSS"/> </ListItem>
+          <ListItem><ListItemText primary="Message Brokers: Kafka, MQTT, AMQP"/></ListItem>
+          <ListItem><ListItemText primary="Databases: Postgres, Cassandra, MongoDB, Redis"/></ListItem>
+          <ListItem><ListItemText primary="Infrastructure/Monitoring: Git, Jenkins, Docker, Kubernetes, Prometheus"/></ListItem>
+      </List>
+    </Section>
 
-    <section>
-      <h1 className="">
-        Employment History
-      </h1>
+    <Section title="Employment History">
         <WorkExperience 
         title={"Senior Software Engineer at Q-Cells - New York (Remote)"} 
         timespan={"MARCH 2022 — PRESENT "} 
@@ -87,8 +87,7 @@ export default function Home() {
           "Cost/schedule oversight and risk analysis for highly-technical asset acquisitions"
         ]
         }/>
-      </section>
-      <Button variant="contained"> This is my Ideal Candidate! </Button>
+    </Section>
   </section>
   )
 }
