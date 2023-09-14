@@ -88,6 +88,16 @@ export default function Home() {
         ]
         }/>
     </Section>
+    <Section title="Education">
+      <Box sx={{mb: 2}}>
+        <Typography variant="h4" color="initial"> Columbia University</Typography>
+          <Typography variant="h5" color="initial"> Masters of Science</Typography>
+      </Box>
+      <Box sx={{pb: 10}}>
+        <Typography variant="h4" color="initial"> University Of Connecticut</Typography>
+          <Typography variant="h5" color="initial"> Bachelors of Science - Magna Cum Laude</Typography>
+      </Box>
+    </Section>
   </section>
   )
 }
