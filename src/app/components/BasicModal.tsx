@@ -29,12 +29,11 @@ export default function BasicModal() {
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-
-    const currentForm = formReference.current;
+    
     // this prevents sending emails if there is no form.
     // in case currentForm cannot possibly ever be null,
     // you could alert the user or throw an Error, here
-    if (currentForm == null) return;
+    if (formReference.current == null) return;
 
     if (process.env.EMAILJS_SERVICE_ID == null) {
       console.log("EMAILJS_SERVICE_ID not set")
