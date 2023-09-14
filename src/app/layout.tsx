@@ -6,7 +6,7 @@ import {Container, Box} from '@mui/material'
 
 export const metadata: Metadata = {
   title: 'Portfolio App',
-  description: '',
+  description: 'Zachary Thatcher, Senior Software Engineer',
 }
 
 export default function RootLayout({
