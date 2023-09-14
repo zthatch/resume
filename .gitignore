@@ -37,4 +37,3 @@ next-env.d.ts
 # prisma
 dev.db*
 .env
-next.config.js

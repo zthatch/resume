@@ -35,21 +35,20 @@ export default function BasicModal() {
     // you could alert the user or throw an Error, here
     if (formReference.current == null) return;
 
-    if (!process.env.EMAILJS_SERVICE_ID) {
-      console.log(process.env)
+    if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID) {
       console.log("EMAILJS_SERVICE_ID not set")
       return
     };
-    if (!process.env.EMAILJS_TEMPLATE_ID) {
+    if (!process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID) {
       console.log("EMAILJS_TEMPLATE_ID not set")
       return
     };
-    if (!process.env.EMAILJS_PUBLIC_KEY) {
+    if (!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
       console.log("EMAILJS_PUBLIC_KEY not set")
       return
     };
 
-    emailjs.sendForm(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, formReference.current, process.env.EMAILJS_PUBLIC_KEY)
+    emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, formReference.current, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
       .then((result) => {
           handleClose();
           console.log(result.text);
